@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .check input:checked::before{
+    content: '✔️';
+    position: absolute;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%; 
+    top: -3.5px;
+    transform: translateX(-50%) translateY(10%);
+    color: blue;
+     
+}
+
+.slider{
+    background-image: linear-gradient(rgb(117, 22, 241), rgb(41, 0, 189) );
+    background-color:aqua;
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color:rgb(241, 245, 4);
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(225, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline: 3px solid yellow;
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid yellow;
+    background-color:brown;
+}
+
+
+/* Media Queries */
+
+/* Small screens: max-width 600px */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .display {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .slider {
+        height: 0.5rem;
+    }
+
+    .generateButton {
+        font-size: 1.2rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Medium screens: max-width 1024px */
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .display {
+        font-size: 1rem;
+    }
+
+    .generateButton {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large screens: min-width 1024px */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 500px;
+    }
+
+    .display {
+        font-size: 1.2rem;
+    }
+}
